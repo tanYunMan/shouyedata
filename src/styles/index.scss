@@ -1,0 +1,151 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  // font-weight: 500;
+}
+.el-form {
+  padding: 30px;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+ul li {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+.title {
+ 
+  padding:15px 10px;
+  font-size:15px;
+  margin-bottom:20px;
+  font-weight: 700;
+  background:#fff;
+  border-bottom:solid 1px #eee; 
+}
+.tab-wrap {
+  border-bottom:1px solid #ddd;
+  // margin:30px;
+  a {
+    display:inline-block;
+    padding:5px;
+    margin:0 5px;
+    &.router-link-active {
+      border-bottom: 2px solid #409eff;
+    }
+  }
+}
+.el-pagination {
+  margin-top:30px;
+}
+.filter-wrap {
+  padding-bottom:20px;
+}
+.container {
+  padding:20px;
+}
+.el-button{
+  padding: 6px 10px;
+}
+.el-table--mini td, .el-table--mini th {
+    padding: 2px 0;
+}
+.el-table td, .el-table th{
+   padding: 4px 0;
+}
+
+
+
+.wl-index-card-padding {
+  .el-card__body{
+    padding:0
+  }
+  max-height: 100px;
+}
+
+//最小屏幕弹窗
+
+
+@media screen and (max-width: 750px) {
+    .wl-dialog-style {
+        width: 100%;
+        .el-dialog{
+          width: 100%;
+        }
+        .el-form{
+          padding: 30px 0;
+          .el-form-item__label{
+              display: none;
+          }
+          .el-form-item__content{
+              margin-left: 30px !important;
+          }
+          .el-input__inner{
+              width: 70%;
+          }
+        }
+    }
+}
+
+// form  bottom 限制
+.wl-form-margin-bottom{
+  .el-form-item{
+    margin-bottom:10px;
+  }
+}
+
